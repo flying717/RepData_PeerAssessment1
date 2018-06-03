@@ -33,7 +33,7 @@ head(data.day)
 qplot(steps,data = data.day)
 ```
 
-##2.Calculate and report the mean and median of the total number of steps taken per day
+##3.Calculate and report the mean and median of the total number of steps taken per day
 
 ```{r}
 mean(data.day$steps)
@@ -49,6 +49,7 @@ data.int <- summarize(data.int, steps=mean(steps))
 ggplot(data.int, aes(interval, steps)) + geom_line()
 
 ```
+
 ##5.The 5-minute interval that, on average, contains the maximum number of steps
 ```{r}
 maxInt <- data.int[which.max(data.int$steps),]
